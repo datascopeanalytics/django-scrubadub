@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Document, FilthType, Filth
+
+
+admin.site.register(Document)
+admin.site.register(FilthType)
+admin.site.register(Filth)
