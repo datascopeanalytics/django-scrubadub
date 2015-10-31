@@ -1,5 +1,14 @@
 <html>
 
+{% load staticfiles %}
+{% load compress %}
+<head>
+  {% compress css file %}
+  {% block css %}
+  {% endblock css %}
+  {% endcompress %}  
+</head>
+
 <body>
    {% block content %}
    {% endblock content %}

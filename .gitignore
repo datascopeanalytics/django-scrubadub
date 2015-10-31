@@ -49,6 +49,7 @@ coverage.xml
 
 # Django stuff:
 *.log
+django_scrubadub/*.css
 
 # Sphinx documentation
 docs/_build/
@@ -58,3 +59,4 @@ target/
 
 # django database
 webdev/db.sqlite3
+webdev/static/CACHE

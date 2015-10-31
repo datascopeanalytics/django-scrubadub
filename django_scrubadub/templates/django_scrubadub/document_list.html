@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+{% load staticfiles %}
+
+{% block css %}
+{{block.super}}
+<link rel="stylesheet" type="text/x-scss" href="{% static 'django_scrubadub/scss/document_list.scss' %}" />
+{% endblock css %}
+
 {% block content %}
 <ul>
   {% for object in object_list %}
