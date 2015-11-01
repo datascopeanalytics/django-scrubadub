@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block css %}
+{{block.super}}
+<link rel="stylesheet" type="text/x-scss" href="{% static 'django_scrubadub/scss/document_detail.scss' %}" />
+{% endblock css %}
+
+{% block content %}
+{% include "django_scrubadub/document_content.html" %}
+{% endblock content %}

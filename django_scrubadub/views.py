@@ -1,8 +1,12 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from .models import Document
 
-# Create your views here.
+
 class DocumentListView(ListView):
+    model = Document
+
+
+class DocumentView(DetailView):
     model = Document
