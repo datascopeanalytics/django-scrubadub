@@ -33,4 +33,8 @@ def word_wrapper(s):
 
     # don't forget to add the rest
     result += s[last_char:]
+
+    # replace new lines with <br/> tags
+    result = result.replace('\n', '<br/>')
+
     return mark_safe(result)
