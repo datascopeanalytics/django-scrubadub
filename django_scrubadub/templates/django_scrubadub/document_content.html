@@ -1,3 +1,5 @@
+{% load word_wrapper %}
+
 <div class="scrubadub document">
-  {{object.text}}
+  {{object.text | word_wrapper}}
 </div>
