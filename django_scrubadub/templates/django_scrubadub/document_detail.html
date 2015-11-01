@@ -10,3 +10,8 @@
 {% block content %}
 {% include "django_scrubadub/document_content.html" %}
 {% endblock content %}
+
+{% block js %}
+{{block.super}}
+<script src="{% static 'django_scrubadub/js/document_detail.js' %}"></script>
+{% endblock js %}

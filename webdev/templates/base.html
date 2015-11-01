@@ -6,11 +6,21 @@
   {% compress css file %}
   {% block css %}
   {% endblock css %}
-  {% endcompress %}  
+  {% endcompress %}
 </head>
 
 <body>
    {% block content %}
    {% endblock content %}
+
+   {% block cdn_js %}
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+   </script>
+   {% endblock cdn_js %}
+
+   {% compress js file %}
+   {% block js %}
+   {% endblock js %}
+   {% endcompress %}
 </body>
 </html>
