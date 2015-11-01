@@ -1,5 +1,10 @@
 .scrubadub {
   &.document {
-
+    span {
+      &.filth {
+        background-color: red;
+        color: white;
+      }
+    }
   }
 }

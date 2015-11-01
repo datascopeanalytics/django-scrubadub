@@ -6,8 +6,8 @@ $(".scrubadub.document span").click(function (event) {
     // TODO: have user choose the type of filth that this is
 
 
-    // TODO: visually indicate that this is filth
-
+    // visually indicate that this is filth
+    $(this).addClass('filth');
 
     // TODO: send filth to backend
 
