@@ -1,8 +1,15 @@
-<html>
+<html lang="en">
 
 {% load staticfiles %}
 {% load compress %}
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% block cdn_css %}
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />
+
+  {% endblock cdn_css %}
+
   {% compress css file %}
   {% block css %}
   {% endblock css %}
@@ -10,11 +17,15 @@
 </head>
 
 <body>
-   {% block content %}
-   {% endblock content %}
+  <div class="container">
+    {% block content %}
+    {% endblock content %}    
+  </div>
 
    {% block cdn_js %}
    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+   </script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js">
    </script>
    {% endblock cdn_js %}
 
