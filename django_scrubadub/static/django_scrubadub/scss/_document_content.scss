@@ -4,6 +4,13 @@
       &.filth {
         background-color: red;
         color: white;
+
+        &[data-filth_type="name"] {
+          background-color: blue;
+        }
+        &[data-filth_type="email"] {
+          background-color: green;
+        }
       }
     }
   }

@@ -9,7 +9,23 @@
 
 {% block content %}
 {% include "django_scrubadub/document_content.html" %}
+
+{% verbatim %}
+<script id="filth-type" type="text/x-handlebars-template">
+  <div>
+    <button type="button" class="btn btn-default" data-filth_type="name">Name</button>
+    <button type="button" class="btn btn-default" data-filth_type="email">Email</button>
+  </div>
+</script>
+{% endverbatim %}
+
 {% endblock content %}
+
+{% block cdn_js %}
+{{block.super}}
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js">
+</script>
+{% endblock cdn_js %}
 
 {% block js %}
 {{block.super}}
