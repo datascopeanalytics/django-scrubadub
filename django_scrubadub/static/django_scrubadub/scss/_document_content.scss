@@ -1,16 +1,49 @@
 .scrubadub {
-  &.document {
-    span {
-      &.filth {
-        background-color: red;
-        color: white;
+  span.filth {
+    background-color: #333;
+    color: white;
+    position: relative;
 
-        &[data-filth_type="name"] {
-          background-color: blue;
-        }
-        &[data-filth_type="email"] {
-          background-color: green;
-        }
+    // fancy styling to make it easier to see the characters at the beginning
+    // or end of a piece of filth
+    $filler_width: 0.2em;
+    &:before, &:after {
+      position: absolute;
+      content: "";
+      background-color: inherit;
+      width: $filler_width;
+      height: 1.15em;
+      top: 0em;
+      z-index: -5;
+    }
+    &:before {
+      left: -$filler_width;
+    }
+    &:after {
+      right: -$filler_width;
+    }
+
+    &[data-filth_type="name"] {
+      background-color: blue;
+    }
+    &[data-filth_type="email"] {
+      background-color: green;
+    }
+  }
+
+  &.document {
+
+  }
+  &.filth-selector {
+    margin-bottom: 6px;
+    span.filth {
+      margin-right: 6px;
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+      &:before, &:after {
+        display: none;
       }
     }
   }

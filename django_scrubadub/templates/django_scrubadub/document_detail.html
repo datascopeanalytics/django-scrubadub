@@ -13,8 +13,14 @@
 {% verbatim %}
 <script id="filth-type" type="text/x-handlebars-template">
   <div>
-    <button type="button" class="btn btn-default" data-filth_type="name">Name</button>
-    <button type="button" class="btn btn-default" data-filth_type="email">Email</button>
+    <div class="scrubadub filth-selector">
+      <span class="filth" data-filth_type="name"></span>
+      <button type="button" class="btn btn-default" data-filth_type="name">Name</button>
+    </div>
+    <div class="scrubadub filth-selector">
+      <span class="filth" data-filth_type="email"></span>
+      <button type="button" class="btn btn-default" data-filth_type="email">Email</button>
+    </div>
   </div>
 </script>
 {% endverbatim %}
