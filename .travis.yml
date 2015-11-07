@@ -10,7 +10,7 @@ install:
 # commands to run the testing suite. if any of these fail, travic lets us know
 script:
   # - nosetests --with-coverage --cover-package=django_scrubadub
-  - pep8 django_scrubadub/
+  - pep8 --exclude=migrations django_scrubadub/
   # - cd docs && make html && cd -
 
 # # commands to run after the tests successfully complete
