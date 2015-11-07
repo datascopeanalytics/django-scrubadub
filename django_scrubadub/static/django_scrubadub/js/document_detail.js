@@ -1,9 +1,10 @@
-var source = $("#filth-type").html();
-var template = Handlebars.compile(source);
+var filth_type_source = $("#filth-type").html();
+var filth_type_template = Handlebars.compile(filth_type_source);
 
 $(".scrubadub.document span").popover({
-    content: template(),
+    content: filth_type_template(),
     html: true,
+    title: "Select the type of filth"
 })
 
 $(".scrubadub.document span").click(function (event) {
@@ -26,7 +27,5 @@ $(".scrubadub.document span").click(function (event) {
 
         // TODO: send selection to backend
     });
-
-
 
 });
