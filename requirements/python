@@ -1,2 +1,10 @@
 scrubadub
+
+# django basics
+django
 django-libsass
+
+# api
+djangorestframework
+django-filter
+markdown

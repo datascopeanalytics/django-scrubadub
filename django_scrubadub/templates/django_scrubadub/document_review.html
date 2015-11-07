@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load word_wrapper %}
+
+{% block css %}
+{{block.super}}
+<link rel="stylesheet" type="text/x-scss" href="{% static 'django_scrubadub/scss/document_detail.scss' %}" />
+{% endblock css %}
+
+{% block content %}
+<div class="scrubadub document">
+  {{object.text | word_wrapper}}
+</div>
+
+{% verbatim %}
+<script id="filth-type" type="text/x-handlebars-template">
+  <div>
+    <div class="scrubadub filth-selector">
+      <span class="filth" data-filth_type="name"></span>
+      <button type="button" class="btn btn-default" data-filth_type="name">Name</button>
+    </div>
+    <div class="scrubadub filth-selector">
+      <span class="filth" data-filth_type="email"></span>
+      <button type="button" class="btn btn-default" data-filth_type="email">Email</button>
+    </div>
+  </div>
+</script>
+{% endverbatim %}
+
+{% endblock content %}
+
+{% block cdn_js %}
+{{block.super}}
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js">
+</script>
+{% endblock cdn_js %}
+
+{% block js %}
+{{block.super}}
+<script src="{% static 'django_scrubadub/js/document_detail.js' %}"></script>
+{% endblock js %}

@@ -39,6 +39,7 @@ INSTALLED_APPS = (
 
     'compressor',
 
+    'rest_framework',
     'django_scrubadub',
 )
 
