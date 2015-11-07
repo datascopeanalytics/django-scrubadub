@@ -33,7 +33,6 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=255)),
                 ('detector_cls', models.CharField(max_length=255)),
-                ('filth_cls', models.CharField(max_length=255)),
                 ('parameters', models.TextField()),
             ],
         ),

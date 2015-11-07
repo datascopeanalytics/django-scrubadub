@@ -16,7 +16,6 @@ class FilthType(models.Model):
 
     name = models.CharField(max_length=255)
     detector_cls = models.CharField(max_length=255)
-    filth_cls = models.CharField(max_length=255)
     parameters = models.TextField()
 
 
