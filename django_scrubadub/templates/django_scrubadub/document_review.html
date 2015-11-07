@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load staticfiles %}
+{% load word_wrapper %}
 
 {% block css %}
 {{block.super}}
@@ -8,7 +9,9 @@
 {% endblock css %}
 
 {% block content %}
-{% include "django_scrubadub/document_content.html" %}
+<div class="scrubadub document">
+  {{object.text | word_wrapper}}
+</div>
 
 {% verbatim %}
 <script id="filth-type" type="text/x-handlebars-template">
