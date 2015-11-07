@@ -13,4 +13,6 @@ router.register(r'documents', views.DocumentViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'^review/(?P<pk>\d+)/$', views.DocumentReviewView.as_view(),
+        name='document-review'),
 ]
