@@ -2,8 +2,6 @@
 
 # testing
 pep8
-coveralls
-nose
 
 # documentation
 sphinx
