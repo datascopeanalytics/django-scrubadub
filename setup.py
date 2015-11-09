@@ -49,7 +49,7 @@ github_url='https://github.com/datascopeanalytics/django-scrubadub'
 setup(
     name='django_scrubadub',
     version=django_scrubadub.VERSION,
-    description="",
+    description="web services API and training interface for removing filth from dirty dirty text",
     long_description=open('README.md').read(),
     url=github_url,
     download_url="%s/archives/master" % github_url,
