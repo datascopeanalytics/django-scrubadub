@@ -4,10 +4,9 @@
 
 This [Django](https://www.djangoproject.com/) package provides a web services
 API (via [Django REST Framework](http://www.django-rest-framework.org/)) and
-also a training interface for removing filth from dirty dirty text with
-[`scrubadub`](http://scrubadub.readthedocs.org/). `django_scrubadub` also
-provides an web-based interface for highlighting filth in dirty dirty text,
-which can then be used to train `scrubadub` classifiers.
+also a training interface for highlighting filth in dirty dirty text, which can
+then be used to train [`scrubadub`](http://scrubadub.readthedocs.org/)
+classifiers [`scrubadub`](http://scrubadub.readthedocs.org/).
 
 ## Usage
 
@@ -39,7 +38,12 @@ To get started using `django_scrubadub` in your Django project:
    ./manage.py migrate
    ```
 
-4. Start the development server with `./manage.py runserver` and open up
+4. Install all of npm packages necessary for the training interface with
+   ```sh
+   npm install
+   ```
+
+5. Start the development server with `./manage.py runserver` and open up
    http://localhost:8000/scrubadub to add some documents for review.
 
 
