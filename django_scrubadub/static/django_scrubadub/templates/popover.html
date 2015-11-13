@@ -1,7 +1,7 @@
 <div>
   <div class="form-group">
     <label for="market">Filth Type</label>
-    <select class="form-control">
+    <select class="form-control" ng-model="vm.filthType" ng-change="vm.onFilthSelected()">
       <option>Name</option>
       <option>Email</option>
       <option>URL</option>
