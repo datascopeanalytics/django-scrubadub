@@ -1,11 +1,32 @@
 <html>
 {% load staticfiles %}
 <head>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />
+
   <script src="{% static 'node_modules/angular/angular.js' %}"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+  <script src="{% static 'node_modules/angular-ui-bootstrap/ui-bootstrap.js' %}"></script>
+  <script src="{% static 'node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.js' %}"></script>
+  <script src="{% static 'node_modules/angular-animate/angular-animate.js' %}"></script>
   <script src="{% static 'node_modules/angular-onselect/dist/angular-onselect.js' %}"></script>
   <script src="{% static 'django_scrubadub/js/document_review.js' %}"></script>
 </head>
-<body ng-app="scrubadub" ng-controller="ScrubadubController as vm" on-select="vm.tktk(selection)" snap-to-word auto-highlight>
-  {{document.text}}
+<body ng-app="scrubadub" ng-controller="ScrubadubController as vm">
+
+  <nav class="navbar navbar-default">
+   <div class="container">
+     <div class="navbar-header">
+       <a class="navbar-brand" href="#">
+         scrubadub that dirty dirty text...eeesh
+       </a>
+     </div>
+   </div>
+  </nav>
+
+  <div class="container">
+   <div class="col-md-6 col-md-offset-3 panel panel-default" on-select="vm.handleSelection(selection)" snap-to-word>
+     {{document.text}}
+   </div>
+ </div>
 </body>
 </html>
