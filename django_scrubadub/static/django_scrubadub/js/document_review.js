@@ -12,6 +12,7 @@
         vm.onFilthSelected = onFilthSelected;
         vm.currentSelection = undefined;
         vm.popoverShown = [];
+        vm.unhighlight = unhighlight;
 
         return vm;
 
@@ -32,14 +33,22 @@
             // selection.removeHighlight();
         }
 
+        function resetFilthType() {
+            vm.popoverShown[vm.popoverShown.length-1] = false;
+            RangeService.disabled = false;
+            vm.filthType = undefined;
+        }
+
         function onFilthSelected() {
             console.log(vm.currentSelection)
             console.log('we have determined that', vm.currentSelection.getText());
             console.log('   is a filthy little ', vm.filthType);
+            resetFilthType();
+        }
 
-            vm.popoverShown[vm.popoverShown.length-1] = false;
-            RangeService.disabled = false;
-            vm.filthType = undefined;
+        function unhighlight() {
+            vm.currentSelection.removeHighlight();
+            resetFilthType();
         }
 
     }
