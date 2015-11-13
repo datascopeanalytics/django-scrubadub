@@ -39,7 +39,7 @@
 
             vm.popoverShown[vm.popoverShown.length-1] = false;
             RangeService.disabled = false;
-            // vm.currentSelection.removeHighlight();
+            vm.filthType = undefined;
         }
 
     }
