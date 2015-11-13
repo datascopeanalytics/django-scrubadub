@@ -17,10 +17,6 @@
         return vm;
 
         function handleSelection(selection) {
-            // TODO: Make Clark fix this
-            if (RangeService.disabled) {
-                return;
-            }
 
             vm.popoverShown.push(true);
             var isOpen = "vm.popoverShown["+(vm.popoverShown.length-1)+"]";

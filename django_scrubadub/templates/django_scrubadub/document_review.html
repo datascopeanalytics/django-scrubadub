@@ -3,7 +3,9 @@
 <head>
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />
   <style>
-    .filth {background-color: #ccc;}
+    .filth {
+      background-color: #ccc;
+    }
   </style>
 
   <script src="{% static 'node_modules/angular/angular.js' %}"></script>
@@ -26,7 +28,7 @@
    </div>
   </nav>
 
-  <div class="container">
+  <div class="container scrubadub">
    <div class="col-md-6 col-md-offset-3 panel panel-default" on-select="vm.handleSelection(selection)" snap-to-word>
      {{document.text}}
    </div>

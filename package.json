@@ -19,7 +19,7 @@
   "dependencies": {
     "angular": "^1.4.7",
     "angular-animate": "^1.4.7",
-    "angular-onselect": "^0.0.3",
+    "angular-onselect": "^0.0.4",
     "angular-ui-bootstrap": "^0.14.3"
   }
 }
