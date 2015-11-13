@@ -5,7 +5,7 @@
   <script src="{% static 'node_modules/angular-onselect/dist/angular-onselect.js' %}"></script>
   <script src="{% static 'django_scrubadub/js/document_review.js' %}"></script>
 </head>
-<body ng-app="onSelect" on-select snap-to-word auto-highlight>
+<body ng-app="scrubadub" ng-controller="ScrubadubController as vm" on-select="vm.tktk(selection)" snap-to-word auto-highlight>
   {{document.text}}
 </body>
 </html>
